@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
             boton.setOnClickListener {
                 val intent = Intent(this,MySecondActivity::class.java)
+                intent.putExtra("nombre_usuario",nombre.text.toString())
                 startActivity(intent)
             }
         }
