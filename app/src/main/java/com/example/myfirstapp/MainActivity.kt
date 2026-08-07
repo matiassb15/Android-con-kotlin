@@ -1,5 +1,6 @@
 package com.example.myfirstapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         boton.setOnClickListener {
             val user = nombre.text.toString()
             texto.text = "Hola $user!"
+
+            boton.setOnClickListener {
+                val intent = Intent(this,MySecondActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
