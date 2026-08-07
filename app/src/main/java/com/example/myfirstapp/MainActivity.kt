@@ -10,6 +10,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var boton: Button
+    private lateinit var nombre: EditText
+    private lateinit var texto: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,9 +25,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val boton = findViewById<Button>(R.id.boton)
-        val nombre = findViewById<EditText>(R.id.nombre)
-        val texto = findViewById<TextView>(R.id.text)
+        boton = findViewById(R.id.boton)
+        nombre = findViewById(R.id.nombre)
+        texto = findViewById(R.id.text)
 
         boton.setOnClickListener {
             val user = nombre.text.toString()
